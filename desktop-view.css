@@ -13,10 +13,60 @@ html {
 
 body {
   font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .container {
   margin: 0 10%;
+}
+
+p,
+button,
+a {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.slideshow,
+.section-teams,
+.feature {
+  height: 80vh;
+}
+.slideshow .welcome-info > *,
+.slideshow .team-text > *,
+.section-teams .welcome-info > *,
+.section-teams .team-text > *,
+.feature .welcome-info > *,
+.feature .team-text > * {
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.overlay h5 {
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+.overlay p {
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+}
+
+.featured {
+  display: flex;
 }
 
 .navbar {
@@ -42,26 +92,65 @@ body {
   font-size: 900;
 }
 
-.slideshow {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-}
-.slideshow .slideshow > * {
-  height: 90%;
-}
-.slideshow .slideshow > * > * {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-}
 .slideshow .project-paramour {
-  height: 100%;
-  width: 100%;
   background-image: url(./img/project-paramour.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-section {
+  height: 100vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.welcome-section span {
+  color: #b0b9cc;
+  position: absolute;
+  font-size: 15rem;
+  top: 2vh;
+  left: 2vw;
+}
+.welcome-section span h5 {
+  letter-spacing: 10px;
+}
+.welcome-section .welcome-left {
+  padding-left: 25%;
+  padding-right: 15%;
+}
+.welcome-section .welcome-left h4 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 4rem 0 2rem 0;
+}
+.welcome-section .welcome-left p {
+  font-size: 1rem;
+}
+.welcome-section img {
+  height: 60%;
+  width: 30%;
+}
+
+.section-teams {
+  background-image: url(./img/Abstract-arch.jpg);
+  margin-bottom: 5vh;
+}
+
+.feature .featured-heading {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature .featured-heading h2 {
+  font-size: 3.5rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 200;
 }
 
 /*# sourceMappingURL=desktop-view.css.map */

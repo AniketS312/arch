@@ -3,6 +3,8 @@
 $main-font: 'Noto Sans JP', sans-serif;
 $secondary-font: 'Noto Sans', sans-serif;
 $grey-color:rgb(128,128,128);
+$steel-blue-color: rgb(176,185,204);
+
 
 html {
   box-sizing: border-box;
@@ -17,8 +19,58 @@ padding:0;
 
 body {
   font-size: 62.5%;
+  font-family: $main-font;
 }
 
 .container {
   margin: 0 10%;
+}
+
+p,
+button,
+a {
+  font-family: $secondary-font;
+}
+
+.slideshow,
+.section-teams,
+.feature {
+  height: 80vh;
+  
+  .welcome-info,
+  .team-text {
+    & > * {
+    margin-bottom: 2rem;
+   }
+  }
+}
+.overlay {
+  background-color: rgba(0,0,0, .3);
+  height: 100%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  h5 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+}
+
+.featured {
+  display: flex;
 }
