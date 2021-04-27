@@ -1,0 +1,186 @@
+// Desktop Common Styles
+.slideshow,
+.section-teams,
+.feature {
+  height: 80vh;
+
+  .welcome-info,
+  .team-text {
+    & > * {
+      margin-bottom: 2rem;
+    }
+  }
+}
+.overlay {
+  background-color: $black-transparent;
+  height: 100%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  h5 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.featured-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: $black-transparent;
+}
+// End of Desktop Common Styles
+// Navbar
+.navbar {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+
+  h5 {
+    font-size: 2.5rem;
+    margin-right: 4rem;
+  }
+  .menu {
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin-right: 2rem;
+        a {
+          text-decoration: none;
+          color: $grey-color;
+          font-size: 1.2rem;
+          font-size: 900;
+        }
+      }
+    }
+  }
+}
+// End of navbar
+// Slideshow
+.slideshow {
+  .project-paramour {
+    background-image: url(./img/project-paramour.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+}
+// End of slideshow
+// Welcome Section
+
+.welcome-section {
+  height: 100vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  span {
+    color: $font-grey;
+    position: absolute;
+    font-size: 20rem;
+    top: 2vh;
+    left: 2vw;
+    h5 {
+      letter-spacing: 10px;
+    }
+  }
+  .welcome-left {
+    padding-left: 25%;
+    padding-right: 15%;
+    font-family: $secondary-font;
+    h4 {
+      font-size: 4rem;
+      line-height: 1;
+      margin: 5rem 0 4rem 0;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: $grey-color;
+    }
+  }
+  img {
+    height: 60%;
+    width: 30%;
+  }
+}
+// End of Welcome Section
+// Teams Section
+.section-teams {
+  background-image: url(./img/Abstract-arch.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 5vh;
+}
+// End of Team Section
+// Featured Section
+
+// Feature Section
+.feature {
+  .featured-heading {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 3.5rem;
+      font-family: $secondary-font;
+      font-size: 200;
+    }
+  }
+  .featured-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10rem;
+    height: 60vh;
+
+    & > * {
+      flex-grow: 1;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      h6 {
+        position: absolute;
+        top: 3%;
+        right: -15px;
+        font-size: 14rem;
+        color: $font-grey-transparent;
+        margin: 0;
+      }
+      .text {
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        color: white;
+        font-size: 1.2rem;
+
+        p:first-of-type {
+          font-weight: 500;
+        }
+      }
+    }
+    .content-one {
+      background-image: url(./img/featured-section/modern-building.jpg);
+    }
+    .content-two {
+      background-image: url(./img/featured-section/modern-buiding-2.jpg);
+    }
+    .content-three {
+      background-image: url(./img/featured-section/modren-building-3.jpg);
+    }
+  }
+}

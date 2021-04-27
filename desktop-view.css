@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Noto+Sans:wght@400;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.container {
+  margin: 0 10%;
+}
+
+p,
+button,
+a {
+  font-family: "Noto Sans", sans-serif;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+}
+
+.featured {
+  display: flex;
+}
+
+.slideshow,
+.section-teams,
+.feature {
+  height: 80vh;
+}
+.slideshow .welcome-info > *,
+.slideshow .team-text > *,
+.section-teams .welcome-info > *,
+.section-teams .team-text > *,
+.feature .welcome-info > *,
+.feature .team-text > * {
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.overlay h5 {
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+.overlay p {
+  font-size: 1.2rem;
+}
+
+.featured-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+.navbar h5 {
+  font-size: 2.5rem;
+  margin-right: 4rem;
+}
+.navbar .menu ul {
+  display: flex;
+  list-style: none;
+}
+.navbar .menu ul li {
+  margin-right: 2rem;
+}
+.navbar .menu ul li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.2rem;
+  font-size: 900;
+}
+
+.slideshow .project-paramour {
+  background-image: url(./img/project-paramour.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-section {
+  height: 100vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.welcome-section span {
+  color: #eeeff3;
+  position: absolute;
+  font-size: 20rem;
+  top: 2vh;
+  left: 2vw;
+}
+.welcome-section span h5 {
+  letter-spacing: 10px;
+}
+.welcome-section .welcome-left {
+  padding-left: 25%;
+  padding-right: 15%;
+  font-family: "Noto Sans", sans-serif;
+}
+.welcome-section .welcome-left h4 {
+  font-size: 4rem;
+  line-height: 1;
+  margin: 5rem 0 4rem 0;
+}
+.welcome-section .welcome-left p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: gray;
+}
+.welcome-section img {
+  height: 60%;
+  width: 30%;
+}
+
+.section-teams {
+  background-image: url(./img/Abstract-arch.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 5vh;
+}
+
+.feature .featured-heading {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature .featured-heading h2 {
+  font-size: 3.5rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 200;
+}
+.feature .featured-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10rem;
+  height: 60vh;
+}
+.feature .featured-content > * {
+  flex-grow: 1;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.feature .featured-content > * h6 {
+  position: absolute;
+  top: 3%;
+  right: -15px;
+  font-size: 14rem;
+  color: rgba(238, 239, 243, 0.9);
+  margin: 0;
+}
+.feature .featured-content > * .text {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  color: white;
+  font-size: 1.2rem;
+}
+.feature .featured-content > * .text p:first-of-type {
+  font-weight: 500;
+}
+.feature .featured-content .content-one {
+  background-image: url(./img/featured-section/modern-building.jpg);
+}
+.feature .featured-content .content-two {
+  background-image: url(./img/featured-section/modern-buiding-2.jpg);
+}
+.feature .featured-content .content-three {
+  background-image: url(./img/featured-section/modren-building-3.jpg);
+}
+
+/*# sourceMappingURL=desktop-view.css.map */
