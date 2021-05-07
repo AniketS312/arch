@@ -1,0 +1,197 @@
+@media screen and (max-width: 1025px) {
+  button {
+    font-size: 1rem;
+  }
+
+  // Navbar Section
+  .navbar {
+    h5 a {
+      font-size: 2.3rem;
+    }
+  a {
+    font-size: 1.4rem;
+  }
+  }
+  .slideshow {
+    height: 90vh;
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    
+  }
+  // End of Navbar Section
+
+// Homepage
+
+
+  .welcome-section {
+    margin-bottom: 0;
+    h5 {
+      position: absolute;
+      font-size: 10rem;
+      margin-right: 0;
+      left: -30px;
+    }
+    img {
+      display: none;
+    }
+    .welcome-left {
+      padding-left: 0%;
+
+      h4 {
+        font-size: 4rem;
+        margin: 4rem 0 2rem 0;
+      }
+    }
+  }
+
+  .section-teams {
+    .overlay {
+      padding-right: 20%;
+      .team-text {
+        h5 {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  
+  }
+
+  .feature {
+    .featured-heading {
+      margin-bottom: 2rem;
+    }
+  }
+// End of Homepage
+// Portfolio Page
+  .portfolio-section {
+    flex-direction: column;
+    .portfolio-outter {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+
+// End of Portfolio Page
+// About Page
+  .about-section {
+    h5 {
+      font-size: 10rem;
+      top: 5rem;
+      right: 2.4rem;
+    }
+    .text-content {
+      width: 80%;
+      height: 80%;
+      padding-top: 20%;
+      &::before {
+      }
+    }
+  }
+
+  .section-info {
+    &__content-section {
+      width: 100%;
+      padding-right: 5%;
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+    &__content-image {
+      display: none;
+    }
+  }
+  .section-team {
+    flex-direction: column;
+    min-height: 130vh;
+  
+    &__content {
+      width: 10%;
+      align-self: flex-start;
+      margin-bottom: 4rem;
+    }
+    &__team {
+   width: 100%;
+   row-gap: 1.5rem;
+   column-gap: .5rem;
+
+   img {
+     height: 80%;
+     width: 80%;
+   }
+    }
+  }
+// End of About Page
+}
+
+@media screen and (max-width: 769px) {
+  // Homepage 
+  .welcome-section {
+    height: 80vh;
+    h5 {
+      font-size: 7rem;
+      margin-bottom: 1rem;
+    }
+
+    .welcome-left {
+      p {
+        font-size: 1.2rem;
+        margin-bottom: .7rem;
+      } 
+    }
+  }
+
+  .section-teams {
+    .overlay {
+      padding-right: 10%;
+    }
+  }
+  .feature {
+    .featured-content {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      span {
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+        }
+  }
+  // End of Homepage
+// Portfolio Page
+.portfolio-section {
+  .portfolio-outter {
+  h5 {
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
+}
+// End of Portfolio Section
+// About Page 
+  
+// End of About Page
+  // Footer
+  .footer {
+    
+    margin: 0;
+    .footer-main {
+    height: 15vh;
+
+    }
+  }
+  // End of Footer
+}

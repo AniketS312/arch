@@ -1,0 +1,64 @@
+.portfolio-section {
+ min-height: 100vh;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ .portfolio-outter {
+  height: 60vh;
+  width: calc(100% / 3);
+  flex: 1 0 33.33%;
+  padding: 1% 2%;
+
+  .portfolio-inner {
+    height: 100%;
+    position: relative;
+  }
+ }
+
+ .portfolio-info {
+   position: absolute;
+  bottom: 10%;
+  left: 5%;
+ h5 {
+   font-size: 1rem;
+   line-height: 1.3rem;
+ }
+}
+ .overlay {
+   padding: 0;
+ }
+ 
+ .bg-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
+ .portfolio-one {
+  background-image: url(./img/porfile-page/profile-1.jpg);
+ }
+ .portfolio-two {
+  background-image: url(./img/porfile-page/profile-2.jpg);
+ }
+ .portfolio-three {
+  background-image: url(./img/porfile-page/profile-3.jpg);
+ }
+ .portfolio-four {
+  background-image: url(./img/porfile-page/profile-4.jpg);
+ }
+ .portfolio-five {
+  background-image: url(./img/porfile-page/profile-5.jpg);
+ }
+ .portfolio-six {
+  background-image: url(./img/porfile-page/profile-6.jpg);
+ }
+ .portfolio-seven {
+  background-image: url(./img/porfile-page/profile-7.jpg);
+ }
+ .portfolio-eight {
+  background-image: url(./img/porfile-page/profile-8.jpg);
+ }
+ .portfolio-nine {
+  background-image: url(./img/porfile-page/profile-9.jpg);
+ }
+ 
+}
