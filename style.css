@@ -63,6 +63,7 @@ button {
   background-color: black;
   color: whitesmoke;
   border: none;
+  cursor: pointer;
 }
 
 .featured {
@@ -88,6 +89,16 @@ a {
   color: black;
 }
 
+.hidden-menu {
+  display: none !important;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+  transition: all 0.7 ease-in-out;
+}
+
 .navbar {
   height: 20vh;
   display: flex;
@@ -105,6 +116,57 @@ a {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+
+.mobile-navbar {
+  display: flex;
+  height: 20vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-navbar h5 {
+  font-size: 2.5rem;
+}
+.mobile-navbar .icon svg {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu .menu-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mobile-menu .menu-content svg {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+.mobile-menu .menu-content ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mobile-menu .menu-content ul li {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  margin-right: 0;
 }
 
 .welcome-section {
@@ -149,7 +211,12 @@ a {
   margin-bottom: 5vh;
 }
 
+.feature {
+  display: flex;
+  flex-direction: column;
+}
 .feature .featured-heading {
+  margin-bottom: 2rem;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -190,7 +257,7 @@ a {
   letter-spacing: 0;
 }
 .feature .featured-content > * p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .feature .featured-content > * .featured-text {
   color: white;
@@ -555,121 +622,6 @@ body {
   padding: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-.about-section {
-  height: 80vh;
-  position: relative;
-}
-.about-section img {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-}
-.about-section h5 {
-  position: absolute;
-  top: 0%;
-  right: 0;
-  color: #b0b9cc;
-  font-size: 15rem;
-}
-.about-section .text-content {
-  position: absolute;
-  background-color: white;
-  width: 60%;
-  height: 70%;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 10% 0 0 15%;
-}
-.about-section .text-content::before {
-  content: "";
-  margin-bottom: 10%;
-  width: 10%;
-  border-top: 1px solid gray;
-}
-.about-section .text-content h6 {
-  font-size: 3rem;
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 3rem;
-}
-.about-section .text-content p {
-  width: 70%;
-  font-size: 1rem;
-}
-
-.section-info {
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.section-info__content-section {
-  width: 40%;
-  padding-right: 5%;
-}
-.section-info__content-section h6 {
-  font-size: 3rem;
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 3rem;
-}
-.section-info__content-section p {
-  width: 90%;
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-}
-.section-info__content-image {
-  width: 60%;
-}
-.section-info__content-image img {
-  width: 60%;
-  height: auto;
-}
-
-.section-team {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-}
-.section-team > * {
-  width: 50%;
-}
-.section-team__content h6 {
-  font-size: 3rem;
-  line-height: 1.1;
-  font-weight: 700;
-}
-.section-team__team {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 2.2rem;
-  column-gap: 1rem;
-}
-.section-team__team h6.name {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-block-end: 0;
-  padding-left: 1rem;
-}
-.section-team__team h6.title {
-  font-size: 0.8rem;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-left: 1rem;
-}
-.section-team img {
-  height: 80%;
-  width: 100%;
-  object-fit: contain;
-}
-
 @media screen and (max-width: 1025px) {
   button {
     font-size: 1rem;
@@ -730,6 +682,9 @@ body {
   .portfolio-section .portfolio-outter:last-of-type {
     margin-bottom: 5rem;
   }
+  .portfolio-section .portfolio-outter .portfolio-inner {
+    height: 50vh;
+  }
 
   .about-section h5 {
     font-size: 10rem;
@@ -742,7 +697,7 @@ body {
     padding-top: 20%;
   }
   .section-info__content-section {
-    width: 100%;
+    width: 90%;
     padding-right: 5%;
   }
   .section-info__content-section p {
@@ -769,6 +724,39 @@ body {
   .section-team__team img {
     height: 80%;
     width: 80%;
+  }
+
+  .contact-main h5 {
+    font-size: 10rem;
+    top: 5rem;
+    right: 0;
+  }
+  .contact-main .text-content {
+    width: 80%;
+    height: 80%;
+    padding-top: 20%;
+  }
+  .contact-form {
+    flex-direction: column;
+  }
+  .contact-form__heading {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .contact-form__heading br {
+    display: none;
+  }
+  .contact-form__content {
+    width: 100%;
+  }
+  .contact-form__content form {
+    width: 100%;
+  }
+  .contact-form__content form .button {
+    width: 15%;
   }
 }
 @media screen and (max-width: 769px) {
@@ -809,6 +797,44 @@ body {
     font-size: 1.4rem;
   }
 
+  .about-section p {
+    font-size: 2rem;
+  }
+  .about-section img {
+    width: 60%;
+  }
+  .about-section h5 {
+    font-size: 8rem;
+    top: 18%;
+  }
+  .about-section .text-content {
+    padding-top: 30%;
+  }
+
+  .section-team__team {
+    height: 100vh;
+    align-items: center;
+    padding-left: 2rem;
+  }
+
+  .contact-main p {
+    font-size: 2rem;
+  }
+  .contact-main img {
+    width: 60%;
+  }
+  .contact-main h5 {
+    font-size: 7rem;
+    top: 18%;
+  }
+  .contact-main .text-content {
+    padding-top: 30%;
+  }
+
+  .contact-details__content {
+    flex-direction: column;
+  }
+
   .footer {
     margin: 0;
   }
@@ -816,5 +842,286 @@ body {
     height: 15vh;
   }
 }
+@media screen and (max-width: 732px) {
+  button {
+    padding: 0.7rem 1rem;
+  }
 
-/*# sourceMappingURL=desktop-view.css.map */
+  .navbar {
+    visibility: hidden;
+    display: none;
+  }
+
+  .hidden-menu {
+    display: flex !important;
+  }
+  .hidden-menu h5 {
+    font-size: 1.5rem;
+  }
+  .hidden-menu .icon svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .slideshow {
+    margin: 0;
+  }
+  .slideshow .overlay {
+    padding: 0 10%;
+  }
+  .slideshow h5 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .slideshow p {
+    width: 90%;
+    font-size: 0.8rem;
+  }
+
+  .welcome-section {
+    max-height: 80vh;
+    margin-top: 5%;
+    padding-bottom: 15%;
+  }
+  .welcome-section span {
+    display: none;
+  }
+  .welcome-section .welcome-left h4 {
+    font-size: 2.5rem;
+  }
+  .welcome-section .welcome-left p {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .section-teams {
+    margin: 0;
+  }
+  .section-teams .overlay {
+    padding: 0 10%;
+  }
+  .section-teams .team-text h5 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature {
+    height: 100vh;
+  }
+  .feature .featured-heading {
+    height: 30%;
+    margin: 1rem 0;
+  }
+  .feature .featured-heading h2 {
+    font-size: 2.5rem;
+  }
+  .feature .featured-heading button {
+    padding: 0.8rem 2rem;
+  }
+  .feature .featured-content {
+    height: auto;
+  }
+  .feature .featured-content > * {
+    height: 40vh;
+  }
+
+  .portfolio-section {
+    margin: 0 1rem;
+  }
+  .portfolio-section .portfolio-outter .portfolio-inner {
+    height: 40vh;
+  }
+  .portfolio-section .portfolio-outter .portfolio-inner p {
+    font-size: 1rem;
+  }
+  .portfolio-section .portfolio-outter .portfolio-inner h5 {
+    font-size: 1.5rem;
+  }
+
+  .about-section {
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .section-info {
+    margin-top: 0 2.5rem;
+    height: 100vh;
+    margin-left: 0 10%;
+    width: 90%;
+  }
+
+  .section-team {
+    height: 410vh;
+  }
+  .section-team__content {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .section-team__team {
+    margin-top: 3rem;
+    padding-left: 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .section-team__team > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .section-team__team img {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .contact-main {
+    display: none;
+  }
+
+  .contact-details {
+    height: 80vh;
+    flex-direction: row;
+  }
+  .contact-details__heading {
+    flex: 1;
+  }
+  .contact-details__content {
+    flex: 3;
+  }
+
+  .map-section {
+    height: 70vh;
+    margin: 5rem 10%;
+  }
+
+  .contact-form {
+    height: 100vh;
+  }
+
+  .footer {
+    padding-top: 10vh;
+    height: 110vh;
+  }
+  .footer .footer-main {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+  .footer .footer-main .arch {
+    font-size: 2rem;
+    width: 60%;
+    height: 15vh;
+    position: absolute;
+    top: -8%;
+  }
+  .footer .footer-main .menu {
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .footer .footer-main .menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .footer .footer-main .menu ul li {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer .footer-main button {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 412px) {
+  .navbar {
+    visibility: hidden;
+    display: none;
+  }
+
+  .hidden-menu {
+    display: flex !important;
+  }
+
+  .slideshow.container {
+    margin: 0;
+  }
+
+  .slideshow .overlay {
+    padding: 0 5%;
+  }
+  .slideshow h5 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .slideshow p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .welcome-section {
+    height: 150vh;
+  }
+  .welcome-section h5 {
+    display: none;
+  }
+  .welcome-section .welcome-left {
+    padding-right: 0;
+  }
+  .welcome-section .welcome-left h4 {
+    font-size: 3rem;
+  }
+  .welcome-section .welcome-left p {
+    overflow-wrap: anywhere;
+    font-size: 1rem;
+  }
+
+  .section-teams {
+    margin: 0;
+  }
+  .section-teams h5 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .feature {
+    margin: 0;
+    height: auto;
+  }
+  .feature .featured-heading {
+    font-family: 2.5rem;
+    margin: 3rem 10%;
+  }
+  .feature .featured-heading button {
+    display: none;
+  }
+  .feature .featured-content {
+    max-height: 200vh;
+  }
+  .feature .featured-content > * {
+    height: 60vh;
+    margin-bottom: 1rem;
+  }
+
+  .contact-details {
+    flex-direction: column;
+  }
+
+  .footer {
+    height: 90vh;
+  }
+}
+@media screen and (max-height: 412px) {
+  .project-paramour h5 {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

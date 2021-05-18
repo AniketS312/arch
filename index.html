@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arch</title>
-  <link rel="stylesheet"  media="screen and (min-width: 768px)" href="./desktop-view.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <!-- Navbar -->
@@ -20,6 +20,34 @@
     </ul>
   </div>
 </nav>
+
+<nav class="mobile-navbar hidden-menu container">
+  <h5><a href="./index.html">Arch</a></h5>
+
+  <div class="icon">
+    <a href="" id="open-menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+      <path stroke-linecap="round" stroke-width="1" stroke="#221b38" d="M2 6H22"></path>
+      <path stroke-linecap="round" stroke-width="1" stroke="#221b38" d="M2 12H14"></path>
+      <path stroke-linecap="round" stroke-width="1" stroke="#221b38" d="M2 18H22"></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+  <div class="mobile-menu hidden" id="hide">
+    <div class="menu-content">
+    <svg id="hide-button" class="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" stroke="#221b38" d="M2 2L22 22"></path>
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" stroke="#221b38" d="M22 2L2 22"></path>
+      </svg>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./portfolio.html">Portfolio</a></li>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </div>
 <!-- End of navbar -->
 <!-- Slideshow section -->
 <section class="slideshow container">
@@ -34,7 +62,7 @@
 </div>
 </section>
 <!-- End of Slideshow section -->
-<!-- Welcoe Section -->
+<!-- Welcome Section -->
 <section class="welcome-section container">
   <span>
     <h5>Welcome</h5>
@@ -114,6 +142,7 @@
 <!-- Footer Section -->
 
   <!-- Script -->
+  <script src="./index.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

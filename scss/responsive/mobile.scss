@@ -1,0 +1,319 @@
+@media screen and (max-width: 732px) {
+
+  // Common style
+  button {
+    padding:.7rem 1rem;    
+  }
+  // End of common style
+
+  .navbar {
+    visibility: hidden;
+    display: none;
+  }
+  .hidden-menu {
+    display: flex  !important;
+    h5 {
+      font-size: 1.5rem;
+    }
+    .icon svg {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  // Homepage
+  .slideshow {
+    margin: 0;
+    .overlay {
+      padding: 0 10%;
+    }
+    h5 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      // margin-bottom: ;
+    }
+    p {
+      width: 90%;
+      font-size: .8rem;
+    }
+   
+  }
+
+  .welcome-section {
+    max-height: 80vh;
+    margin-top: 5%;
+    padding-bottom: 15%;
+    span {
+      display: none;
+    }
+    .welcome-left {
+      h4 {
+        font-size: 2.5rem;
+      }
+      p {
+      width: 100%;
+      font-size: .8rem;
+    }
+  }
+  }
+
+  .section-teams {
+    margin: 0;
+    .overlay {
+      padding: 0 10%;
+    }
+    .team-text {
+      h5 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  .feature {
+    height: 100vh;
+    .featured-heading {
+      height: 30%;
+      margin: 1rem 0;
+      h2 {
+        font-size: 2.5rem;
+      }
+      button {  
+        padding: .8rem 2rem;
+      }
+    }
+    .featured-content {
+      height: auto;
+      & > * {
+      height: 40vh;
+      }
+    }
+  }
+// End of Homepage
+// Portfolio page
+  .portfolio-section {
+    margin: 0 1rem;
+
+   
+    .portfolio-outter {
+      .portfolio-inner {
+        height: 40vh;
+        
+        p { 
+          font-size: 1rem;
+        }
+        h5 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+// End of portfolio Page
+// About Page
+  .about-section {
+   display: none;
+   overflow-x: hidden;
+  }
+  .section-info {
+    margin-top: 0 2.5rem;
+    height: 100vh;
+    margin-left: 0 10%;
+    width:  90%;
+  }
+
+  .section-team {
+    height: 410vh;
+
+    &__content {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    &__team {
+      margin-top: 3rem;
+      padding-left: 0;
+      grid-template-columns: 1fr;
+      width: 100%;
+      & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      & img {
+        width: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+// End of about page
+
+// Contact Section
+.contact-main {
+  display: none;
+}
+
+.contact-details {
+  height: 80vh;
+  flex-direction: row;
+  &__heading {
+    flex: 1;
+  }
+  &__content {
+    flex: 3;
+  }
+}
+
+.map-section {
+  height: 70vh;
+  margin: 5rem 10%;
+}
+
+.contact-form {
+  height: 100vh;
+}
+// End of contact section
+
+
+  // Footer
+  .footer {
+    padding-top: 10vh;
+    height: 110vh;
+    .footer-main {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      position: relative;
+      .arch {
+        font-size: 2rem;
+        width: 60%;
+        height: 15vh;
+        position: absolute;
+        top: -8%;
+      }
+  
+      .menu {
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          li {
+            margin-bottom: 2rem;
+            margin-right: 0;
+          }
+        }
+      }
+      button {
+
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        // transform: translate(0, 50%);
+      }
+    }
+    
+  }
+
+}
+
+@media screen and (max-width: 412px) {
+
+  .navbar {
+    visibility: hidden;
+    display: none;
+  }
+  .hidden-menu {
+    display: flex  !important;
+  }
+
+ .slideshow.container {
+   margin: 0;
+ }
+
+ .slideshow {
+   .overlay {
+     padding: 0 5%;
+   }
+   h5 {
+     font-size: 3rem;
+     line-height: 3rem;
+   }
+   p {
+     width: 90%;
+     font-size: 1rem;
+   }
+ }
+
+ .welcome-section {
+   height: 150vh;
+   h5 {
+    display: none;
+  }
+   .welcome-left {
+   padding-right: 0;
+     h4 {
+     font-size: 3rem;
+     }
+     p {
+       overflow-wrap: anywhere;
+       font-size: 1rem;
+     }
+   }
+ }
+
+ .section-teams {
+   margin: 0;
+   h5 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+   }
+ }
+ .feature {
+   margin: 0;
+   height: auto;
+
+   .featured-heading {
+     font-family: 2.5rem;
+     margin: 3rem 10%;
+
+     button {
+       display: none;
+     }
+   }
+
+   .featured-content {
+     max-height: 200vh;
+     & > * {
+       height: 60vh;
+       margin-bottom: 1rem;
+     }
+   }
+ } 
+
+.contact-details {
+  flex-direction: column;
+}
+
+ .footer {
+   height: 90vh;
+ }
+
+}
+
+@media screen and (max-height: 412px) {
+  .project-paramour  {
+    h5 {
+      font-size: 2rem;
+    }
+  }
+
+
+} 

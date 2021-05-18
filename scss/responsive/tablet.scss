@@ -24,8 +24,6 @@
   // End of Navbar Section
 
 // Homepage
-
-
   .welcome-section {
     margin-bottom: 0;
     h5 {
@@ -75,10 +73,12 @@
       &:last-of-type {
         margin-bottom: 5rem;
       }
+
+      .portfolio-inner {
+        height: 50vh;
+      }
     }
   }
-
-
 // End of Portfolio Page
 // About Page
   .about-section {
@@ -98,7 +98,7 @@
 
   .section-info {
     &__content-section {
-      width: 100%;
+      width: 90%;
       padding-right: 5%;
       p {
         margin-bottom: 2rem;
@@ -129,6 +129,56 @@
     }
   }
 // End of About Page
+// Contact Page
+.contact-main {
+    
+  h5 {
+    font-size: 10rem;
+    top: 5rem;
+    right: 0;
+  }
+  .text-content {
+    width: 80%;
+    height: 80%;
+    padding-top: 20%;
+
+    h6 {
+    }
+  }
+}
+
+.contact-details {
+  &__content {
+  }
+}
+
+.contact-form {
+  flex-direction: column;
+
+  &__heading {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    br {
+      display: none;
+    }
+
+
+  }
+  &__content {
+    width: 100% ;
+  form {
+    width: 100%;
+    .button {
+      width: 15%;
+    }
+  }
+}
+}
+// End of Contact Page
 }
 
 @media screen and (max-width: 769px) {
@@ -182,8 +232,50 @@
 }
 // End of Portfolio Section
 // About Page 
-  
+  .about-section {
+    p {
+      font-size: 2rem;
+    }
+    img {
+      width: 60%;
+    }
+    h5 {
+      font-size: 8rem;
+      top: 18%;
+    }
+    .text-content {
+      padding-top: 30%;
+    }
+  }
+
+.section-team__team {  
+  height: 100vh;
+  align-items: center;
+  padding-left: 2rem;
+}
 // End of About Page
+// Contact Page
+.contact-main {
+  p {
+    font-size: 2rem;
+  }
+  img {
+    width: 60%;
+  }
+  h5 {
+    font-size: 7rem;
+    top: 18%;
+  }
+  .text-content {
+    padding-top: 30%;
+  }
+}
+.contact-details {
+  &__content {
+    flex-direction: column;
+  }
+}
+// End of Contact Page
   // Footer
   .footer {
     
