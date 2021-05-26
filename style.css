@@ -26,6 +26,10 @@ a {
   font-family: "Noto Sans", sans-serif;
 }
 
+button a {
+  color: white;
+}
+
 .slideshow,
 .section-teams,
 .feature {
@@ -258,6 +262,10 @@ a {
 }
 .feature .featured-content > * p {
   font-size: 1rem;
+}
+.feature .featured-content > * a {
+  color: white;
+  cursor: pointer;
 }
 .feature .featured-content > * .featured-text {
   color: white;
@@ -1112,6 +1120,14 @@ body {
 
   .contact-details {
     flex-direction: column;
+  }
+
+  .section-team {
+    height: 140vh;
+  }
+
+  .contact-form {
+    height: 80vh;
   }
 
   .footer {
